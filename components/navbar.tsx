@@ -53,7 +53,7 @@ export default function Navbar() {
               className={`font-bold transition-all duration-300 ease-in-out
                                       ${scrolled ? "text-lg" : "text-xl"}`}
             >
-              RUBI-KENYA
+              RAN-KENYA
             </Link>
           </div>
           <div className="hidden md:block">
@@ -63,13 +63,22 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   className={`hover:bg-blue-600 px-3 py-2 rounded-md font-medium
-                              transition-all duration-300 ease-in-out
+                              transition-all duration-300 ease-in-out text-white
                               ${scrolled ? "text-sm" : "text-base"}`}
                 >
                   {item.name}
                 </Link>
               ))}
-              <ThemeToggle />
+              <Link
+                href="/donate"
+                // active={true}
+                className="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-lg px-5 py-2.5 text-center mr-2 mb-2"
+              >
+                Donate
+              </Link>
+              <div className="">
+                <ThemeToggle />
+              </div>
             </div>
           </div>
           <div className="md:hidden">

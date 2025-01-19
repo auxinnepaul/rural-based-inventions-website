@@ -4,7 +4,8 @@ import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { APP_DESCRIPTION, APP_NAME, APP_SLOGAN } from "@/lib/constants";
 import Navbar from "@/components/navbar";
-// import ScrollProgress from "@/components/magic-ui/scroll-progress";
+import { Footer } from "@/components/footer";
+import ScrollProgress from "@/components/magic-ui/scroll-progress";
 
 export const metadata: Metadata = {
   title: {
@@ -29,9 +30,12 @@ export default function RootLayout({
           disableTransitionOnChange
           themes={["light", "dark", "green", "rose", "violet", "orange"]}
         >
-          {/* <ScrollProgress className="bottom-[65px]" /> */}
+          <ScrollProgress className="bottom-[65px]" />
           <Navbar />
           <main className="flex-grow pt-16">{children}</main>
+          <div className="block">
+            <Footer />
+          </div>
           {/* <Toaster /> */}
         </ThemeProvider>
       </body>
