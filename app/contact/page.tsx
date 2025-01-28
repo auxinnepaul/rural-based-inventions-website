@@ -4,6 +4,7 @@ import SocialMediaLinks from "../../components/SocialMediaLinks";
 import { FadeInView } from "@/components/animations/FadeInView";
 import { SlideInView } from "@/components/animations/SlideInView";
 import { ScaleInView } from "@/components/animations/ScaleInView";
+import { Badge } from "@/components/ui/badge";
 
 export default function Contact() {
   return (
@@ -21,6 +22,7 @@ export default function Contact() {
         <div className="py-12 flex-1 lg:flex lg:justify-center lg:h-screen lg:overflow-auto">
           <div className="max-w-lg flex-1 mx-auto px-4">
             <FadeInView>
+              <Badge className="mb-2">Contact</Badge>
               <div>
                 <h3 className="text-3xl font-semibold sm:text-4xl">
                   Get in touch

@@ -78,30 +78,35 @@ const workItems: WorkItem[] = [
 
 export function WorkCards() {
   return (
-    <StaggerChildren className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      {workItems.map((item, index) => (
-        <ScaleInView key={index} delay={index * 0.1}>
-          <Card className="flex flex-col h-full">
-            <CardHeader className="p-0">
-              <Image
-                src={item.image || "/placeholder.svg"}
-                alt={item.title}
-                width={300}
-                height={200}
-                className="w-full h-48 object-cover rounded-t-lg"
-              />
-            </CardHeader>
-            <CardContent className="flex-grow p-4">
-              <Badge className="mb-2">{item.category}</Badge>
-              <CardTitle className="text-xl mb-2">{item.title}</CardTitle>
-              <CardDescription>{item.description}</CardDescription>
-            </CardContent>
-            <CardFooter className="p-4 bg-muted">
-              <p className="text-sm font-medium">Impact: {item.impact}</p>
-            </CardFooter>
-          </Card>
-        </ScaleInView>
-      ))}
-    </StaggerChildren>
+    <div className="relative  overflow-hidden bg-blue-100 dark:bg-zinc-900 py-2 md:py-10">
+      <div className="absolute inset-0 bg-zinc-100 dark:bg-slate-950 transform -skew-y-6 origin-top-right"></div>
+      <div className="container mx-auto px-2">
+        <StaggerChildren className="relative z-10  grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {workItems.map((item, index) => (
+            <ScaleInView key={index} delay={index * 0.1}>
+              <Card className="flex flex-col h-full">
+                <CardHeader className="p-0">
+                  <Image
+                    src={item.image || "/placeholder.svg"}
+                    alt={item.title}
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-t-lg"
+                  />
+                </CardHeader>
+                <CardContent className="flex-grow p-4">
+                  <Badge className="mb-2">{item.category}</Badge>
+                  <CardTitle className="text-xl mb-2">{item.title}</CardTitle>
+                  <CardDescription>{item.description}</CardDescription>
+                </CardContent>
+                <CardFooter className="p-4 bg-muted">
+                  <p className="text-sm font-medium">Impact: {item.impact}</p>
+                </CardFooter>
+              </Card>
+            </ScaleInView>
+          ))}
+        </StaggerChildren>
+      </div>
+    </div>
   );
 }

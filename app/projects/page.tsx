@@ -125,29 +125,39 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="min-h-screen ">
+    <div className="">
       <FadeInView>
-        <section className="relative py-24 overflow-hidden">
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="https://images.unsplash.com/photo-1708519845416-fd984f67129a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8UnVyYWwlMjBBZHZhbmNlbWVudCUyME5ldHdvcmslMjAoUkFOKSUyMHByb2plY3RzfGVufDB8fDB8fHww"
-              alt="Rural landscape"
-              layout="fill"
-              objectFit="cover"
-              className="opacity-20"
-            />
+        <div className="container mx-auto px-4">
+          <div className="relative h-[600px] overflow-hidden">
+            <div className="absolute inset-0">
+              <Image
+                src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80"
+                alt="Rural landscape"
+                fill
+                style={{ objectFit: "cover" }}
+                quality={100}
+                priority
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-transparent opacity-70"></div>
+            <div className="relative z-10 flex flex-col justify-center h-full text-white px-4 sm:px-6 lg:px-8 max-w-4xl">
+              <Badge className="mb-2 w-20">Projects</Badge>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold mb-4 leading-tight">
+                Our Projects
+              </h1>
+              <p className="text-xl md:text-2xl  mb-8 max-w-2xl font-light">
+                Discover how Rural Advancement Network is making a lasting
+                impact in rural communities through our innovative and
+                sustainable projects.
+              </p>
+              <p className="text-base md:text-xl mb-8 max-w-3xl font-light backdrop-blur-sm bg-white/30 p-6 rounded-lg">
+                From supporting farmers with modern techniques to advancing
+                education and healthcare, our projects drive sustainable growth
+                and enhance quality of life.
+              </p>
+            </div>
           </div>
-          <div className="container mx-auto px-4 relative z-10">
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Our Projects
-            </h1>
-            <p className="text-lg md:text-xl max-w-3xl custom-text-color">
-              Discover how Rural Advancement Network is making a lasting impact
-              in rural communities through our innovative and sustainable
-              projects.
-            </p>
-          </div>
-        </section>
+        </div>
       </FadeInView>
 
       <main className="container mx-auto px-4 py-12">

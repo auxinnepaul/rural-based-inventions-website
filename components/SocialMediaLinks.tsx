@@ -29,7 +29,7 @@ export default function SocialMediaLinks() {
   ];
 
   return (
-    <div className="flex space-x-4">
+    <div className="flex space-x-4 text-black dark:text-white">
       {socialLinks.map((link, index) => (
         <motion.div
           key={link.name}

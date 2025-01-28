@@ -2,7 +2,7 @@ import { CTASection } from "@/components/blocks/cta-with-rectangle";
 
 export function CTAsection() {
   return (
-    <div className="py-10 md:py-20">
+    <div className="">
       <CTASection
         badge={{
           text: "Join Us",

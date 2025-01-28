@@ -16,12 +16,12 @@ export default function DonationForm() {
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="bg-white p-8 rounded-lg shadow-md"
+      className="border p-8 rounded-lg shadow-md"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <h2 className="text-2xl font-semibold mb-4 text-green-700">
+      <h2 className="text-2xl font-semibold mb-4 text-blue-700">
         Make a Donation
       </h2>
       <div className="mb-4">
@@ -38,7 +38,7 @@ export default function DonationForm() {
               type="button"
               className={`py-2 px-4 rounded ${
                 amount === value
-                  ? "bg-green-600 text-white"
+                  ? "bg-blue-600 text-white"
                   : "bg-gray-200 text-gray-700"
               }`}
               onClick={() => setAmount(value)}
@@ -66,7 +66,7 @@ export default function DonationForm() {
       </div>
       <button
         type="submit"
-        className="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
       >
         Donate Now
       </button>

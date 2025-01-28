@@ -1,43 +1,17 @@
-"use client";
-
 import * as React from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Switch } from "@/components/ui/switch";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-import {
-  Facebook,
-  Instagram,
-  Linkedin,
-  Moon,
-  Send,
-  Sun,
-  Twitter,
-} from "lucide-react";
+import { Send } from "lucide-react";
 import { APP_NAME, EMAIL, PHONE_NUMBER } from "@/lib/constants";
 import Link from "next/link";
+import SocialMediaLinks from "./SocialMediaLinks";
+import ThemeToggleSlider from "./theme-toggle-slider";
 
 function Footer() {
-  const [isDarkMode, setIsDarkMode] = React.useState(true);
-  //   const [isChatOpen, setIsChatOpen] = React.useState(false);
-
-  React.useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [isDarkMode]);
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative border-t bg-background text-foreground transition-colors duration-300">
+    <footer className="bg-cyan-950 dark:bg-zinc-900 text-white relative border-t bg-background text-foreground transition-colors duration-300 mt-6 md:mt-16">
       <div className="container mx-auto px-4 py-12 md:px-6 lg:px-8">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div className="relative">
@@ -80,123 +54,53 @@ function Footer() {
                 About Us
               </Link>
               <Link
-                href="/services"
-                className="block transition-colors hover:text-primary"
-              >
-                Services
-              </Link>
-              <Link
-                href="/projects"
-                className="block transition-colors hover:text-primary"
-              >
-                Our Projects
-              </Link>
-              <Link
-                href="/work"
+                href="/our-work"
                 className="block transition-colors hover:text-primary"
               >
                 Our Work
               </Link>
               <Link
-                href="/blog"
+                href="/projects"
                 className="block transition-colors hover:text-primary"
               >
-                Blog
+                Projects
+              </Link>
+              <Link
+                href="/get-involved"
+                className="block transition-colors hover:text-primary"
+              >
+                Get Involved
+              </Link>
+              <Link
+                href="/contact"
+                className="block transition-colors hover:text-primary"
+              >
+                Contact
               </Link>
             </nav>
           </div>
           <div>
             <h3 className="mb-4 text-lg font-semibold">Contact Us</h3>
             <address className="space-y-2 text-sm not-italic">
-              <p>Busia, Kenya</p>
+              <p>Busia County, Kenya</p>
               <p>Budalangi Road</p>
               <p>Phone: {PHONE_NUMBER}</p>
               <p>Email: {EMAIL}</p>
             </address>
+            <div className="my-6">
+              <Link
+                href="/donate"
+                className=" py-4 text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-lg px-5 text-center mr-2 my-10"
+              >
+                Donate
+              </Link>
+            </div>
           </div>
           <div className="relative">
             <h3 className="mb-4 text-lg font-semibold">Follow Us</h3>
-            <div className="mb-6 flex space-x-4">
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                    >
-                      <Facebook className="h-4 w-4" />
-                      <span className="sr-only">Facebook</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow us on Facebook</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                    >
-                      <Twitter className="h-4 w-4" />
-                      <span className="sr-only">Twitter</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow us on Twitter</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                    >
-                      <Instagram className="h-4 w-4" />
-                      <span className="sr-only">Instagram</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Follow us on Instagram</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger asChild>
-                    <Button
-                      variant="outline"
-                      size="icon"
-                      className="rounded-full"
-                    >
-                      <Linkedin className="h-4 w-4" />
-                      <span className="sr-only">LinkedIn</span>
-                    </Button>
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p>Connect with us on LinkedIn</p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Sun className="h-4 w-4" />
-              <Switch
-                id="dark-mode"
-                checked={isDarkMode}
-                onCheckedChange={setIsDarkMode}
-              />
-              <Moon className="h-4 w-4" />
-              <Label htmlFor="dark-mode" className="sr-only">
-                Toggle dark mode
-              </Label>
+            <div className="space-y-4">
+              <SocialMediaLinks />
+              <ThemeToggleSlider />
             </div>
           </div>
         </div>

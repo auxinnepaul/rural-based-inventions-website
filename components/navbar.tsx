@@ -57,7 +57,6 @@ export default function Navbar() {
                                       ${scrolled ? "text-lg" : "text-xl"}`}
             >
               {APP_NAME}
-              {/* RAN-KENYA */}
             </Link>
           </div>
           <div className="hidden md:block">

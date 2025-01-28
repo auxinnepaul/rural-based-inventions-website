@@ -42,10 +42,10 @@ export default function OurValues() {
       <div className="container mx-auto px-4">
         <FadeInView>
           <div className="text-start mb-16">
-            <h2 className="text-4xl font-semibold text-blue-900 mb-6">
+            <h2 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-4">
               Our Values
             </h2>
-            <p className="text-xl text-gray-700 max-w-3xl">
+            <p className="text-xl text-gray-600 dark:text-gray-400  max-w-3xl">
               Our core values are the foundation of our organization, guiding
               every aspect of our work. They symbolize our unwavering commitment
               to the communities we serve and drive positive change in rural
@@ -61,14 +61,16 @@ export default function OurValues() {
                 key={index}
                 direction={index % 2 === 0 ? "left" : "right"}
               >
-                <Card className="bg-gray-100">
+                <Card className="bg-slate-100 dark:bg-neutral-900">
                   <CardHeader>
-                    <CardTitle className="text-blue-700">
+                    <CardTitle className="text-blue-700 dark:text-blue-400">
                       {value.title}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-gray-600">{value.description}</p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {value.description}
+                    </p>
                   </CardContent>
                 </Card>
               </SlideInView>

@@ -7,8 +7,8 @@ export function HeroSection() {
         title="Investing in Rural Growth and Development"
         description="We are committed to creating sustainable solutions that uplift rural communities and promote lasting change."
         primaryCta={{
-          text: "See Who We Are",
-          href: "/about",
+          text: "Donate",
+          href: "/donate",
         }}
         secondaryCta={{
           text: "Let's Talk",
