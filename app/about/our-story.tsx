@@ -71,8 +71,8 @@ export default function OurStorySection() {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold">Our Growth</h3>
                   <p className="text-muted-foreground">
-                    Over the years, we've expanded our programs to address the
-                    evolving needs of rural communities. From agricultural
+                    Over the years, we&apos;ve expanded our programs to address
+                    the evolving needs of rural communities. From agricultural
                     innovation and small business development to healthcare
                     access and broadband connectivity, our work touches on all
                     aspects of rural life.
@@ -97,7 +97,7 @@ export default function OurStorySection() {
                   Our Impact
                 </h2>
                 <p className="text-muted-foreground md:text-xl max-w-3xl mx-auto">
-                  For nearly a decade, we've been working alongside rural
+                  For nearly a decade, we&apos;ve been working alongside rural
                   communities to create lasting change.
                 </p>
               </div>
@@ -125,7 +125,7 @@ export default function OurStorySection() {
                     </div>
                     <h3 className="text-2xl font-bold">200+</h3>
                     <p className="text-muted-foreground">
-                      Communities across the region where we've implemented
+                      Communities across the region where we&apos;ve implemented
                       programs
                     </p>
                   </CardContent>

@@ -3,9 +3,6 @@ import Image from "next/image";
 import { FadeInView } from "@/components/animations/FadeInView";
 import { SlideInView } from "@/components/animations/SlideInView";
 import { ScaleInView } from "@/components/animations/ScaleInView";
-import { RotateInView } from "@/components/animations/RotateInView";
-
-import { Card, CardContent } from "@/components/ui/card";
 import OurValues from "./our-values";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -112,20 +109,20 @@ export default function FeatureSection() {
                   At the heart of our mission lies a dedication to building
                   resilient, thriving communities. These communities are the
                   beneficiaries and driving force behind our work. Our mission
-                  isn't just words on paper; it's the driving force behind every
-                  initiative we undertake.
+                  isn&apos;t just words on paper; it&apos;s the driving force
+                  behind every initiative we undertake.
                 </p>
 
                 <div className="mt-6 space-y-3">
                   <cite className="block font-medium">
                     Balantidium, CEO, {APP_NAME}
                   </cite>
-                  <img
+                  <Image
                     className="h-5 w-fit dark:invert"
-                    src="https://html.tailus.io/blocks/customers/nvidia.svdg"
+                    src="/blocks/customers/nvidia.svdg"
                     alt="App Logo"
-                    height="20"
-                    width="auto"
+                    width={500}
+                    height={300}
                   />
                 </div>
               </blockquote>
