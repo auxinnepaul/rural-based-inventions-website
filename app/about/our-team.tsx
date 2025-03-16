@@ -99,7 +99,7 @@ export default function OurTeam() {
 
   return (
     <section className="py-14 md:py-20">
-      <div className="max-w-screen-[1300px] mx-auto px-2 md:px-0">
+      <div className="container mx-auto px-2 md:px-0">
         <FadeInView delay={0.3}>
           <div className="max-w-xl">
             <h2 className="text-4xl font-semibold text-blue-700 dark:text-blue-400 mb-4">

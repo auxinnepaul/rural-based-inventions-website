@@ -127,7 +127,7 @@ export default function ProjectsPage() {
   return (
     <div className="">
       <FadeInView>
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 mt-6">
           <div className="relative h-[600px] overflow-hidden">
             <div className="absolute inset-0">
               <Image

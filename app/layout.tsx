@@ -6,6 +6,7 @@ import { APP_DESCRIPTION, APP_NAME, APP_SLOGAN } from "@/lib/constants";
 import Navbar from "@/components/navbar";
 import { Footer } from "@/components/footer";
 import ScrollProgress from "@/components/magic-ui/scroll-progress";
+import BackToTop from "@/components/back-to-top";
 
 export const metadata: Metadata = {
   title: {
@@ -33,6 +34,7 @@ export default function RootLayout({
           <ScrollProgress className="bottom-[65px]" />
           <Navbar />
           <main className="flex-grow pt-16">{children}</main>
+          <BackToTop />
           <div className="block">
             <Footer />
           </div>

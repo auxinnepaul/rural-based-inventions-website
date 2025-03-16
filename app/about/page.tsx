@@ -11,10 +11,14 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { APP_NAME } from "@/lib/constants";
+import { NumberTicker } from "@/components/magic-ui/number-ticker";
+import MissionVissionFocusSection from "./mission-vission";
+import OurStorySection from "./our-story";
 
 export default function FeatureSection() {
   return (
-    <main className="min-h-screen max-w-[1600px] mx-auto py-10 md">
+    <main className="min-h-screen mx-auto py-10 md">
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0">
@@ -31,7 +35,7 @@ export default function FeatureSection() {
         <div className="relative z-10 text-start text-white px-4 max-w-4xl mx-auto">
           <Badge className="mb-2">About Us</Badge>
           <p className="text-5xl md:text-7xl font-bold mb-6">
-            We are Rural Advancement Network (RAN-KENYA)
+            We are {APP_NAME}
           </p>
           <p className="text-xl md:text-2xl mb-8 text-gray-200">
             And our unwavering task is on empowering rural communities in Kenya
@@ -49,97 +53,92 @@ export default function FeatureSection() {
           </Link>
         </div>
       </section>
-
-      <div className="">
-        <div className="container mx-auto px-4 py-12">
-          <div className="dark:bg-card dark:shadow-[2px_2px_4px_rgba(0,0,0,0.4),-1px_-1px_3px_rgba(255,255,255,0.1)] p-6 rounded-lg">
+      <section className="py-16 md:py-32">
+        <div className="container mx-auto px-4 py-12  space-y-8 md:space-y-12">
+          <div className="relative z-10 max-w-2xl space-y-6">
             <FadeInView>
-              <h1 className="text-4xl font-bold text-center mb-8 text-green-800">
-                About Rural Advancement Network
-              </h1>
+              <h2 className="text-4xl font-medium lg:text-5xl max-w-xl">
+                About {APP_NAME}
+              </h2>
             </FadeInView>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <SlideInView direction="left">
-                <Image
-                  src="https://images.unsplash.com/photo-1504634482029-3b2b5d57d4b6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fHJ1cmFsJTIwd2V0bGFuZHMlMjBhZnJpY2FuJTIwYXJlYXxlbnwwfHwwfHx8MA%3D%3D"
-                  alt="Rural community"
-                  width={600}
-                  height={400}
-                  className="rounded-lg shadow-lg"
-                />
-              </SlideInView>
-              <SlideInView direction="right" delay={0.2}>
-                <div className="text-gray-600 dark:text-gray-400 ">
-                  <p className="text-lg md:text-xl leading-relaxed mt-2">
-                    We a non-governmental organization dedicated to improving
-                    the lives of people in rural communities. We believe in
-                    sustainable development, education, and empowerment to
-                    create lasting positive change.
-                  </p>
-                  <p className="text-lg md:text-xl leading-relaxed mt-2">
-                    We believe in empowerment as a cornerstone of our mission.
-                    Empowerment means enabling individuals and communities to
-                    take control of their own destinies, fostering self-reliance
-                    and resilience. We champion equality, ensuring that every
-                    community member, regardless of gender, age, or background,
-                    has equal access to opportunities and resources.
-                  </p>
-                  <p className="text-lg md:text-xl leading-relaxed mt-2">
-                    At the heart of our mission lies a dedication to building
-                    resilient, thriving communities. These communities are the
-                    beneficiaries and driving force behind our work. Our mission
-                    isn&apos;t just words on paper; it&apos;s the driving force
-                    behind every initiative we undertake.
-                  </p>
-                </div>
-              </SlideInView>
-            </div>
+            <SlideInView direction="right" delay={0.2}>
+              <p className="text-lg md:text-xl">
+                We a non-governmental organization dedicated to improving the
+                lives of people in rural communities. We believe in sustainable
+                development, education, and empowerment to create lasting
+                positive change.
+              </p>
+              <p className="text-lg md:text-xl mt-6">
+                We believe in empowerment as a cornerstone of our mission.
+                Empowerment means enabling individuals and communities to take
+                control of their own destinies, fostering self-reliance and
+                resilience. We champion equality, ensuring that every community
+                member, regardless of gender, age, or background, has equal
+                access to opportunities and resources.
+              </p>
+            </SlideInView>
           </div>
-          <div className="grid md:grid-cols-2 gap-4 py-6 md:py-10">
+          <div className="grid gap-6 sm:grid-cols-2 md:gap-12 lg:gap-24">
             <div>
-              <Card className="dark:bg-stone-950 p-2 md:p-4">
-                <CardContent>
-                  <RotateInView>
-                    <h2 className="text-3xl font-bold text-center mb-8 text-green-700">
-                      OUR MISSION
-                    </h2>
-                  </RotateInView>
-                  <FadeInView delay={0.3}>
-                    <p className="text-xl text-start text-gray-600 dark:text-gray-400  mb-12 max-w-3xl mx-auto">
-                      Our mission is clear and resolute: to uplift and transform
-                      the lives of rural communities in Kenya. We are dedicated
-                      to implementing sustainable interventions that address
-                      pressing challenges and promote local development.
-                    </p>
-                  </FadeInView>
-                </CardContent>
-              </Card>
-            </div>
-            <div>
-              <Card className="dark:bg-stone-950 p-2 md:p-4">
-                <CardContent>
-                  <RotateInView>
-                    <h2 className="text-3xl font-bold text-center mb-8 text-green-700">
-                      OUR FOCUS
-                    </h2>
-                  </RotateInView>
-                  <FadeInView delay={0.3}>
-                    <p className="text-xl text-start dark:text-gray-400 mb-12 max-w-3xl mx-auto">
-                      Our focus extends beyond short-term fixes; we&apos;re
-                      dedicated to fostering long-lasting, positive change.
-                      Through collaboration and a deep understanding of the
-                      local context, we strive to promote local development and
-                      improve the quality of life for all.
-                    </p>
-                  </FadeInView>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
+              <FadeInView>
+                <p className="text-lg md:text-xl font-bold">
+                  Through innovation and dedication, we strive to uplift and
+                  impact lives, creating opportunities for growth and
+                  sustainability.
+                </p>
+              </FadeInView>
 
-          <OurValues />
-          <OurTeam />
+              <div className="mb-12 mt-12 grid grid-cols-2 gap-2 md:mb-0">
+                <div className="space-y-4">
+                  <div className="bg-linear-to-r from-zinc-950 to-zinc-600 bg-clip-text text-5xl font-bold  dark:from-white dark:to-zinc-800">
+                    +
+                    <NumberTicker value={100000} />
+                  </div>
+                  <p>Lives to transform</p>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-linear-to-r from-zinc-950 to-zinc-600 bg-clip-text text-5xl font-bold  dark:from-white dark:to-zinc-800">
+                    +
+                    <NumberTicker value={10000} />
+                  </div>
+                  <p>Lives already touched</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative space-y-4">
+              <blockquote className="border-l-4 pl-4">
+                <p className="text-lg md:text-xl">
+                  At the heart of our mission lies a dedication to building
+                  resilient, thriving communities. These communities are the
+                  beneficiaries and driving force behind our work. Our mission
+                  isn't just words on paper; it's the driving force behind every
+                  initiative we undertake.
+                </p>
+
+                <div className="mt-6 space-y-3">
+                  <cite className="block font-medium">
+                    Balantidium, CEO, {APP_NAME}
+                  </cite>
+                  <img
+                    className="h-5 w-fit dark:invert"
+                    src="https://html.tailus.io/blocks/customers/nvidia.svdg"
+                    alt="App Logo"
+                    height="20"
+                    width="auto"
+                  />
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </section>
+      <MissionVissionFocusSection />
+      <OurStorySection />
+      <OurValues />
+      <OurTeam />
+      <div className="">
+        <div className="container mx-auto px-4 py-12">
           <ScaleInView delay={0.4}>
             <div className=" border bg-stone-600 dark:bg-stone-950 text-white rounded-lg p-8 text-center">
               <h2 className="text-3xl font-semibold mb-4">Join Our Cause</h2>

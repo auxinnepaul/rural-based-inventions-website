@@ -44,7 +44,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out
                     ${
                       scrolled
-                        ? "h-14 bg-blue-700/80 dark:bg-slate-950/80 backdrop-blur-md shadow-md"
+                        ? "h-14 bg-blue-700/60 dark:bg-slate-950/80 backdrop-blur-md shadow-md"
                         : "h-20 bg-blue-700 dark:bg-slate-950"
                     }`}
     >

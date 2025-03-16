@@ -91,7 +91,7 @@ export function AchievementsAndImpactStories() {
         </FadeInView>
 
         <div className="relative flex w-full flex-col items-center justify-center overflow-hidden rounded-lg bg-background ">
-          <Marquee pauseOnHover className="[--duration:60s] h-[400px]">
+          <Marquee pauseOnHover className="[--duration:20s] h-[400px]">
             <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
               {achievements.map((achievement, index) => (
                 <ScaleInView key={index} delay={index * 0.1}>

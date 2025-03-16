@@ -14,7 +14,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 
-import { Heart, Sprout, BookOpen, Users, MoveDown } from "lucide-react";
+import { Heart, Sprout, BookOpen, Users, MoveRight } from "lucide-react";
 import { WorkCards } from "./WorkCards";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -41,8 +41,8 @@ export default function OurWorkPage() {
                 className="inline-block bg-white text-primary font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:bg-green-50 hover:scale-105 shadow-md"
               >
                 <div className="flex flee-col">
-                  <p>Explore Work In Action</p>
-                  <MoveDown className=" animate-bounce" />
+                  <p>Explore more Works projects</p>
+                  <MoveRight className=" animate-bounce" />
                 </div>
               </Link>
             </div>
